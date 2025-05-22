@@ -1,0 +1,122 @@
+.title {
+    text-align: center;
+    padding: 20px 0;
+}
+
+body {
+    background-color: #FFC5D3;
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.recipe-page .overlay {
+  position: absolute;
+  width: 100%;
+  max-width: 1200px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  min-height: 100vh; 
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+.img-wrapper {
+  display: inline-block;
+  width: 250px;
+  margin: 0 15px;
+  white-space: normal;
+  vertical-align: top;
+  background: rgba(255, 200, 200, 0.9);
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.img-wrapper:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.recipe-container {
+  display: block; 
+  text-align: center;
+  margin: 20px; 
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.image-label {
+  position: relative;
+  top: -5px;
+  margin: 0 10px;
+  background: rgba(255, 200, 200, 0.9); 
+  padding: 8px;
+  text-align: center;
+  border-radius: 0 0 12px 12px; 
+}
+
+@media (max-width: 600px) {
+  .overlay {
+    width: 95%;
+    top: 10px;
+    transform: translateX(-50%); 
+  }
+  .img-wrapper {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+ul, ol {
+  text-align: left;
+  max-width: 950px;
+  margin: 20px auto;
+  padding-left: 30px;
+}
+
+li {
+  margin: 10px 0;
+  padding-left: 10px;
+  list-style-position: outside;
+}
+
+h2, h4 {
+  text-align: center;
+  margin: 30px 0 15px;
+}
+
+.recipe-page .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
